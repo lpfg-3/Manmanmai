@@ -1,0 +1,197 @@
+/* rem */
+html{
+  font-size: 100px;
+}
+
+/*css基础样式*/
+/*css样式重置*/
+body,
+div,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+p,
+dl,
+dt,
+dd,
+a,
+img,
+button,
+form,
+table,
+th,
+tr,
+td,
+tbody,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  /*所有盒子采用内减模式*/
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  /*在移动去除默认点击高亮效果*/
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  font-size: 0.22rem;
+  // color: #333;
+  background-color: #f5f5f5;
+  font-family: "Microsoft Yahei", Arial, sans-serif;
+  /*后面都是备胎*/
+}
+ul,
+ol {
+  list-style: none;
+}
+a,
+a:hover,
+a:active,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #333;
+}
+/* a,img 标签转块级 */
+a,img{
+  display: block;
+}
+input {
+  border: none;
+  outline: none;
+}
+/*废物利用*/
+em,
+i {
+  font-style: normal;
+}
+
+textarea,button{
+  resize: none;
+  outline: none;
+  border: none;
+}
+button{
+  cursor: pointer;
+}
+
+
+
+/*公共样式*/
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+/*清除浮动*/
+.clearfix::before,
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+
+/* 容器 */
+.container{
+  width: 100%;
+  min-width: 320px;
+  max-width: 750px;
+  background-color: #EFEFEF;
+  margin: 0 auto;  
+}
+
+/* 顶部共用 */
+.mmm_header_common{
+
+    // width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    background-color: #FF841D;
+    
+    .icon_left{
+      // img{
+      //   width: 3.71rem;
+      //   height: 0.5rem;
+      // }
+      padding: .3rem .3rem;
+      i{
+        display: block;
+        background: url(../images/icback.svg) no-repeat;
+        background-size: 0.4rem 0.4rem;
+        width: 0.4rem;
+        height: 0.4rem;
+      }
+    }
+    .icon_right{
+      padding: 0.16rem;
+      img{
+        width: 0.68rem;
+        height: 0.68rem;
+      }
+    }
+    h3{
+      padding: 0 100px;
+      font-size: .4rem;
+      text-align: center;
+      overflow: hidden;
+      color: #fff;
+    }
+  
+}
+
+/* 底部共用 */
+/* index cart */
+.mmm_footer_common{
+  text-align: center;
+  
+  .top{
+
+    a{
+      float: left;
+      width: 33.33%;
+      height: 0.65rem;
+      line-height: 0.65rem;
+      border-top: 0.01rem solid #ccc;
+      border-right: 0.01rem solid #ccc;
+      border-bottom: 0.01rem solid #ccc;
+    }
+    a:last-child{
+      border-right: none;
+    }
+  }
+  .bottom{
+    padding: 0.3rem 0;
+    color: #666;
+    a{
+      display: inline;
+    }
+    .app{
+      color: red;
+    }
+    .compare{
+      color: #666;
+    }
+  }
+}
