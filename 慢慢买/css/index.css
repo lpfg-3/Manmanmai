@@ -1,56 +1,8 @@
-/* 头部 */
-.mmm_header {
-  height: 1rem;
-  background-color: #FF841D;
-}
-.mmm_header .logo {
-  padding: 0.25rem 0.32rem;
-}
-.mmm_header .logo img {
-  width: 3.71rem;
-  height: 0.5rem;
-}
-.mmm_header .app {
-  padding: 0.16rem;
-}
-.mmm_header .app img {
-  width: 0.68rem;
-  height: 0.68rem;
-}
-/* 搜索 */
-.mmm_search {
-  height: 1rem;
-  margin-bottom: 0.2rem;
-  background-color: #fff;
-}
-.mmm_search .btn {
-  margin: 0.2rem 0.25rem;
-}
-.mmm_search .btn input {
-  width: 1.3rem;
-  height: 0.6rem;
-  font-size: 0.32rem;
-  color: #fff;
-  background-color: #FF841D;
-  border-radius: 0.3rem;
-}
-.mmm_search .input {
-  height: 100%;
-  overflow: hidden;
-  padding: 0.2rem 0.25rem;
-}
-.mmm_search .input input {
-  height: 0.6rem;
-  width: 100%;
-  font-size: 0.24rem;
-  background-color: #F1F1F1;
-  border-radius: 0.3rem;
-  padding: 0 0.4rem;
-}
 /* 导航 */
 .mmm_nav {
   background-color: #fff;
   padding-bottom: 0.2rem;
+  margin-top: 0.2rem;
   margin-bottom: 0.1rem;
   /* 默认显示前8个 */
 }
@@ -77,45 +29,7 @@
 /* 推荐 */
 .mmm_recommend {
   /* 标题 */
-  /* 推荐内容 */
   /* 更多 */
-}
-.mmm_recommend .content li {
-  height: 2.58rem;
-  background-color: #fff;
-  border-bottom: 0.01rem solid #ccc;
-  padding: 0.2rem;
-}
-.mmm_recommend .content li a {
-  width: 100%;
-  height: 100%;
-}
-.mmm_recommend .content li a .img {
-  width: 2rem;
-  height: 2rem;
-  float: left;
-}
-.mmm_recommend .content li a .img img {
-  width: 100%;
-  height: 100%;
-}
-.mmm_recommend .content li a .desc {
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-}
-.mmm_recommend .content li a .desc .top {
-  font-size: 0.28rem;
-}
-.mmm_recommend .content li a .desc .top .price {
-  color: #FF6C00;
-}
-.mmm_recommend .content li a .desc .bottom {
-  color: #A1A1A1;
-  width: 100%;
-  position: absolute;
-  bottom: 0.35rem;
-  left: 0;
 }
 .mmm_recommend .more {
   padding: 0 0.25rem;

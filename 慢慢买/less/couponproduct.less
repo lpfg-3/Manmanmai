@@ -1,0 +1,94 @@
+
+.mmm_header_common{
+  background-color: #F4483E;
+}
+
+.mmm_coupon_pro{
+  .title{
+    text-align: center;
+    color: #999;
+    padding: .2rem 0;
+    font-size: .24rem;
+  }
+  .list{
+    li>a .bottom{
+      bottom: 0;
+      .price{
+        color: #000;
+        font-weight: bold;
+        padding-bottom: .3rem;
+      }
+      .time{
+        color: #EF7F14;
+      }
+    }
+    .desc{
+      background: url(../images/arrow-right.svg) no-repeat right bottom;
+      background-size: .4rem .4rem
+    }
+  }
+}
+
+/* 模态框 */
+.modal{
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  /* 蒙层 */
+  .box{
+
+    width: 4rem;
+    height: 3.2rem;
+    margin: 2.5rem auto;
+    position: relative;
+    /* 图片显示区 */
+    .content{
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      ul{
+        transition: transform 1s;
+      }
+      li{
+        float: left;
+        img{
+          width: 4rem;
+          height: 3.3rem;
+        }
+      }
+    } 
+
+    /* 左右箭头 */
+    .prev,
+    .next{
+      content: '';
+      width: 2rem;
+      height: 2rem;
+      background: url(../images/arrow-right.svg) no-repeat center center;
+      background-size: 1.6rem;
+      position: absolute;
+      cursor:pointer; 
+    }
+    .next{
+      top: 0.4rem;
+      right: -2rem;
+    }
+    .prev{
+      top: 0.4rem;
+      left: -2rem;
+      transform: rotate(180deg);
+    }
+  }
+ 
+ 
+}
+
+/* 设置一个  添加过渡  的类*/
+.transiton {
+  transition: transform 1s;
+}

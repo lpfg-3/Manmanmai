@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>index</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/category.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- 头部 -->
+    <div class="mmm_header_common">
+      <div class="logo">
+        <a href='javascript:;'>
+          <img src="images/header_logo.png">
+        </a>
+      </div>
+      <div class="icon_right">
+        <a href='javascript:;'>
+          <img src="images/header_app.png">
+        </a>
+      </div>
+    </div>
+
+    <!-- 搜索框 -->
+    <div class="mmm_search_common">
+      <div class="btn fr">
+        <input type="button" value="搜索">
+      </div>
+      <div class="input">
+        <input type="search" placeholder="请输入你要比价的商品">
+      </div>
+    </div>
+
+    <!-- 分类 -->
+    <div class="mmm_category">
+      <!-- 一级分类 -->
+      <ul class="first">
+        <li class="first_item"><a href="javascript:;">大家电</a></li>
+      </ul>
+    </div>
+
+    <!-- 底部 -->
+    <div class="mmm_footer_common">
+      <div class="top clearfix">
+        <a href='javascript:;'>登陆</a>
+        <a href='javascript:;'>注册</a>
+        <a href='javascript:;' id="to_top">返回顶部</a>
+      </div>
+      <div class="bottom">
+        <p class="clearfix">
+          <a href='javascript:;' class="app">手机APP下载</a>
+          <a href='javascript:;'>慢慢买手机版</a>
+          <a href='javascript:;' class="compare">--掌上比价平台</a>
+        </p>
+
+        <p>m.manmanbuy.com</p>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 模板 -->
+  <!-- 一级分类 -->
+  <script type="text/html" id="firstTpl">
+    {{ each result v i }}
+      <li class="first_item"data-titleId="{{ v.titleId }}">
+        <a href="javascript:;">{{ v.title }}</a>
+        <ul class="second clearfix"></ul>
+      </li>
+    {{ /each }}
+  </script>
+  <!-- 二级分类 -->
+  <script type="text/html" id="secondTpl">
+    {{ each result v i }}
+      <li>
+        <a href="productlist.html?categoryid={{ v.categoryId }}">{{ v.category }}</a>
+      </li>
+    {{ /each }}
+  </script>
+
+
+  <script src="lib/zepto/zepto.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/category.js"></script>
+</body>
+
+</html>

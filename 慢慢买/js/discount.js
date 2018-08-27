@@ -1,12 +1,12 @@
 $(function () {
   
-  var productid  = lpf.getSearch('productid') || 20;
-  // console.log(id);
+  var productid  = lpf.getSearch('productid') || 0;
+  console.log(productid);
 
   // 一进入页面便渲染一次
   $.ajax({
     type: 'get',
-    url: 'http://127.0.0.1:9090/api/getmoneyctrlproduct',
+    url: 'http://127.0.0.1:9090/api/getdiscountproduct',
     data: {
       productid: productid
     },
@@ -19,7 +19,6 @@ $(function () {
       var htmlStr = template('infoTpl', info);
       $('.moneyproduct').html( htmlStr );
       $('.mmm_extra .comment').html( info.result[0].productComment );
-      $('.mmm_extra .city_list').html( info.result[0].productCity );
     }
   })
   

@@ -1,0 +1,109 @@
+/* 产品介绍 */
+.moneyproduct {
+  background-color: #fff;
+  padding: 0.4rem 0.4rem 0 0.2rem;
+}
+.moneyproduct h3 {
+  font-size: 0.36rem;
+  color: #5A5A5A;
+}
+.moneyproduct .price {
+  font-size: .28rem;
+  color: #FF5000;
+  padding-top: .2rem;
+}
+.moneyproduct .subtitle {
+  color: #999;
+  padding: 0.4rem 0;
+}
+.moneyproduct .info p {
+  font-size: 0.32rem;
+  color: #606060;
+  line-height: 0.48rem;
+}
+.moneyproduct .info img:first-child {
+  float: right;
+  width: 2.2rem;
+  height: 2.2rem;
+}
+.moneyproduct .info img:last-child {
+  padding: .2rem;
+  width: 4rem;
+  height: 4rem;
+}
+.mmm_extra {
+  background-color: #fff;
+  padding: .2rem;
+}
+.mmm_extra .go_shop {
+  font-size: 0.28rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  padding: 0 0.2rem;
+  margin-bottom: 0.2rem;
+}
+.mmm_extra .go_shop a {
+  background-color: #FF9000;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+}
+.mmm_extra .code {
+  padding: 0.4rem 0;
+}
+.mmm_extra .code img {
+  margin: 0 auto;
+  width: 100%;
+}
+.mmm_extra .comment .tit {
+  font-size: .32rem;
+  padding: .12rem .16rem;
+}
+.mmm_extra .comment .reply {
+  border: 0.01rem solid #ccc;
+  padding: 0 0.2rem 0.7rem 0.2rem;
+  position: relative;
+}
+.mmm_extra .comment .reply textarea {
+  width: 100%;
+  font-size: 0.22rem;
+  height: 1.36rem;
+}
+.mmm_extra .comment .reply .tjdp {
+  font-size: 0.32rem;
+  height: 0.7rem;
+  width: 2rem;
+  color: #fff;
+  background-color: #ff841d;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.mmm_extra .comment .list li {
+  padding: .36rem .2rem;
+}
+.mmm_extra .comment .list li .userimg img {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  float: left;
+}
+.mmm_extra .comment .list li .con {
+  overflow: hidden;
+  padding-left: .1rem;
+}
+.mmm_extra .comment .list li .con .name {
+  font-size: .26rem;
+}
+.mmm_extra .comment .list li .con .name div:first-child {
+  color: #5997c0;
+  float: left;
+}
+.mmm_extra .comment .list li .con .name div:last-child {
+  color: #999;
+  float: right;
+}
+.mmm_extra .comment .list li .con .content {
+  font-size: .32rem;
+  color: #606060;
+}

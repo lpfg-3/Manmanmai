@@ -1,0 +1,149 @@
+
+.mmm_bcj_head{
+  background-color: #F4483E;
+}
+
+.mmm_nav{
+  height: 0.8rem;
+  line-height: 0.8rem;
+  font-size: .26rem;
+  overflow: hidden;
+  
+  
+  ul{
+    display: inline-block;
+    white-space:nowrap;
+
+  }
+
+  li{
+    display: inline-block;
+
+
+    a{
+      // display: inline-block;
+      height: 0.8rem;
+      margin: 0 .23rem;
+      
+    }
+    a.current{
+      border-bottom: 3px solid #E22F32;
+    }
+  }
+  
+}
+
+.mmm-product{
+  ul{
+    background-color: #F8F8F8;
+    overflow: hidden;
+    padding-bottom: .6rem;
+  }
+  li{
+    margin-top: .1rem;
+    background-color: #fff;
+    position: relative;
+    height: 3rem;
+    padding: .2rem .1rem .2rem 2.8rem;
+  }
+  img{
+    position: absolute;
+    width: 2.6rem;
+    height: 2.6rem;
+    left: .1rem;
+    top: .2rem
+  }
+  .desc{
+    position: relative;
+    height: 100%;
+    .title{
+      font-size: .28rem;
+      
+    }
+    .price{
+      font-size: .48rem;
+      color: #fc353a;
+      padding: .2rem 0;
+      del,em{
+        font-size: .24rem;
+      }
+      del{
+        color: #999;
+      }
+    }
+    .num{
+      position: absolute;
+      left: 0;
+      bottom: .95rem;
+      padding: .15rem 0;
+      height: 0.3rem;
+      line-height: 0.3rem;
+     
+      i{
+        float: left;
+        width: 1.6rem;
+        height: 0.3rem;
+        line-height: 0.3rem;
+        background-color: #FFB7B7;
+        border: 0.02rem solid #FC262B;
+        border-radius: .15rem;
+        overflow: hidden;
+        position: relative;
+        em{
+          display: block;
+          height: 0.3rem;
+          background-color: #FC353A;
+          border-radius: .15rem;
+          
+          border: 0.02rem solid #FC262B;
+          position: absolute;
+          top: -0.02rem;
+          left: 0rem;
+        }
+        span{
+          color: #fff;
+          font-size: .26rem;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%)
+        }
+      }
+      b{
+        font-size: .28rem;
+        margin-left: .3rem;
+        color: #FC403F;
+      }
+    }
+    .link{
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      .coupon{
+        a{
+          text-align: center;
+          height: 0.5rem;
+          line-height: 0.5rem;
+          border: 0.01rem dashed #FC262B;
+          width: 2.2rem;
+          font-size: .24rem;
+        }
+      }
+      .shop{
+        a{
+          text-align: center;
+          width: 1.2rem;
+          height: 0.55rem;
+          line-height: 0.55rem;
+          font-size: .26rem;
+          color: #fff;
+          border-radius: .1rem;
+          background-color: #FF5E5D;
+        }
+      }
+    }
+  }
+
+
+}

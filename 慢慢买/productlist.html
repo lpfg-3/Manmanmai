@@ -5,9 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>moneyctrl</title>
+  <title>productlist</title>
   <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/moneyctrl.css">
 </head>
 
 <body>
@@ -16,38 +15,58 @@
 
     <!-- 头部 -->
     <div class="mmm_header_common">
-      <div class="icon_left fl">
-        <a href='javascript:history.go(-1);'>
-          <i></i>
+      <div class="logo">
+        <a href='javascript:;'>
+          <img src="images/header_logo.png">
         </a>
       </div>
-      
-      <div class="icon_right fr">
+      <div class="icon_right">
         <a href='javascript:;'>
           <img src="images/header_app.png">
         </a>
       </div>
-      <h3>省钱控-最新优惠</h3>
     </div>
 
+    <!-- 搜索框 -->
+    <div class="mmm_search_common">
+      <div class="btn fr">
+        <input type="button" value="搜索">
+      </div>
+      <div class="input">
+        <input type="search" placeholder="请输入你要比价的商品">
+      </div>
+    </div>
 
-    <!-- 推荐产品 --> 
+    <!-- 三级导航 -->
+    <div class="mmm_three_common">
+      <div class="three">
+        <a href='index.html'>首页</a>
+        <span>></span>
+        <a href='category.html'>全部分类</a>
+        <span>></span>
+        <a href='javascript:;'>电视</a>
+        <span>></span>
+      </div>
+      <button>筛选</button>
+    </div>
+
+    <!-- 商品列表 -->
     <div class="mmm_product_list_common">
-      <ul class="items">
+      <ul>
         <!-- 推荐产品模板渲染区 -->
         <li>
           <a href="javascript:;">
             <div class="img">
-              <img src="images/jiangyou.jpg" alt="">
+              <img src="images/tv.png">
             </div>
             <div class="desc">
               <div class="top">
-                <span class="info">移动端凑单品：海天 鲜味 生抽 1.28L </span>
-                <span class="price"> 10.9元</span>
+                <span class="info">乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视</span>
               </div>
               <div class="bottom">
-                <span class="fl">京东商城 | 10-25 14:10</span>
-                <span class="fr">有1人评论</span>
+                <div class="price">￥1999.00</div>
+                <span class="fl">报价(6)</span>
+                <span class="fl">评论(2286)</span>
               </div>
             </div>
           </a>
@@ -57,7 +76,9 @@
 
     <!-- 分页 -->
     <div class="mmm_pagination_common clearfix">
-      <div class="fl"><button class="prev">上一页</button></div>
+      <div class="fl">
+        <button class="prev">上一页</button>
+      </div>
       <div class="fl">
         <select class="select">
           <option selected value="1">1/3</option>
@@ -65,9 +86,13 @@
           <option value="3">3/3</option>
         </select>
       </div>
-      <div class="fl"><button class="next">下一页</button></div>
+      <div class="fl">
+        <button class="next">下一页</button>
+      </div>
     </div>
- 
+
+
+
     <!-- 底部 -->
     <div class="mmm_footer_common">
       <div class="top clearfix">
@@ -81,37 +106,48 @@
           <a href='javascript:;'>慢慢买手机版</a>
           <a href='javascript:;' class="compare">--掌上比价平台</a>
         </p>
-            
+
         <p>m.manmanbuy.com</p>
-         
+
       </div>
     </div>
 
   </div>
 
   <!-- 模板 -->
-  <!-- 推荐商品 -->
-  <script type="text/html" id="itemsTpl">
+  <!-- 三级导航 -->
+  <script type="text/html" id="threeTpl">
+    <a href='index.html'>首页</a>
+    <span>></span>
+    <a href='category.html'>全部分类</a>
+    <span>></span>
+    <a href='javascript:;'>{{ result[0].category }}</a>
+    <span>></span>
+  </script>
+
+  <!-- 商品列表 -->
+  <script type="text/html" id="listTpl">
     {{ each result v i }}
       <li>
-        <a href="moneyproduct.html?productid={{ v.productId }}">
+        <a href="bijia.html?productid={{ v.productId }}">
           <div class="img">
-            {{@v.productImgSm}}
+            {{@v.productImg}}
           </div>
           <div class="desc">
             <div class="top">
               <span class="info">{{ v.productName }}</span>
-              <span class="price">{{ v.productPinkage }}</span>
             </div>
             <div class="bottom">
-              <span class="fl">{{ v.productFrom }} | {{ v.productTime }}</span>
-              <span class="fr">{{ v.productComCount }}</span>
+              <div class="price">{{ v.productPrice }}</div>
+              <span>{{ v.productQuote }}</span>
+              <span>{{ v.productCom }}</span>
             </div>
           </div>
         </a>
       </li>
     {{ /each }}
   </script>
+  <!-- 下拉框 -->
   <!-- select下拉框 -->
   <script type="text/html" id="selectTpl">
     <% for (var i = 1; i <= pageTotal  ; i++) { %>
@@ -122,7 +158,7 @@
   <script src="lib/zepto/zepto.min.js"></script>
   <script src="lib/artTemplate/template-web.js"></script>
   <script src="js/common.js"></script>
-  <script src="js/moneyctrl.js"></script>
+  <script src="js/productlist.js"></script>
 </body>
 
 </html>

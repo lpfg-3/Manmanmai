@@ -1,81 +1,8 @@
-/* 头部 */
-.mmm_header {
-  height: 1rem;
-  background-color: #FF841D;
-}
-.mmm_header .logo {
-  padding: 0.25rem 0.32rem;
-}
-.mmm_header .logo img {
-  width: 3.71rem;
-  height: 0.5rem;
-}
-.mmm_header .app {
-  padding: 0.16rem;
-}
-.mmm_header .app img {
-  width: 0.68rem;
-  height: 0.68rem;
-}
-/* 搜索 */
-.mmm_search {
-  height: 1rem;
-  background-color: #fff;
-}
-.mmm_search .btn {
-  margin: 0.2rem 0.25rem;
-}
-.mmm_search .btn input {
-  width: 1.3rem;
-  height: 0.6rem;
-  font-size: 0.32rem;
-  color: #fff;
-  background-color: #FF841D;
-  border-radius: 0.3rem;
-}
-.mmm_search .input {
-  height: 100%;
-  overflow: hidden;
-  padding: 0.2rem 0.25rem;
-}
-.mmm_search .input input {
-  height: 0.6rem;
-  width: 100%;
-  font-size: 0.24rem;
-  background-color: #F1F1F1;
-  border-radius: 0.3rem;
-  padding: 0 0.4rem;
-}
 /* 比价 */
 .mmm_bijia {
   background-color: #fff;
 }
-.mmm_bijia .title {
-  position: relative;
-  height: 0.75rem;
-  line-height: 0.75rem;
-  padding: 0 0.15rem;
-  border-top: 0.01rem solid #ccc;
-  border-bottom: 0.01rem solid #ccc;
-  background-image: linear-gradient(#fff, #ECECEC);
-}
-.mmm_bijia .title .three a {
-  font-size: .24rem;
-  display: inline;
-}
-.mmm_bijia .title button {
-  font-size: .24rem;
-  width: 1.2rem;
-  height: 0.55rem;
-  position: absolute;
-  top: 0.1rem;
-  right: 0.15rem;
-  border-radius: .1rem;
-  background-image: linear-gradient(#D8D8D8, #fff);
-  border: none;
-  box-shadow: 0 0.01rem 0.02rem #888;
-  border-bottom: 0.01rem solid #bababa;
-}
+
 .mmm_bijia .desc {
   height: 5.6rem;
   text-align: center;

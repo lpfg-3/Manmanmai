@@ -25,7 +25,7 @@ $(function () {
       success: function ( info ) {
         console.log( info );
         var htmlStr = template('recommendTpl', info);
-        $('.mmm_recommend .content ul').html( htmlStr );
+        $('.mmm_recommend .mmm_product_list_common ul').html( htmlStr );
       }
     })
   }

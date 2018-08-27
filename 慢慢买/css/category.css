@@ -1,0 +1,40 @@
+.mmm_category {
+  margin-bottom: .5rem;
+}
+.mmm_category .first {
+  background-color: #EDEDED;
+  border-top: 0.01rem solid #ccc;
+  border-bottom: 0.01rem solid #ccc;
+  border-radius: 0.1rem;
+}
+.mmm_category .first_item > a {
+  border-bottom: 0.01rem solid #ccc;
+  height: 0.8rem;
+  line-height: .8rem;
+  padding-left: .3rem;
+  font-size: .32rem;
+  font-weight: bold;
+  color: #000;
+}
+.mmm_category .first_item:last-child > a {
+  border: none;
+}
+.mmm_category .second {
+  display: none;
+  background-color: #fff;
+}
+.mmm_category .second li {
+  width: 33.33%;
+  border-right: 0.01rem solid #ccc;
+  border-bottom: 0.01rem solid #ccc;
+  float: left;
+}
+.mmm_category .second li a {
+  text-align: center;
+  font-size: .26rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+}
+.mmm_category .second li:nth-child( 3n ) {
+  border-right: none;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>优惠卷</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/coupon.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- 头部 -->
+    <div class="mmm_header_common">
+      <div class="icon_left fl">
+        <a href='javascript:history.go(-1);'>
+          <i></i>
+        </a>
+      </div>
+
+      <div class="icon_right fr">
+        <a href='javascript:;'>
+          <img src="images/header_app.png">
+        </a>
+      </div>
+      <h3>优惠卷</h3>
+    </div>
+
+    <!-- 主体 -->
+    <div class="mmm_coupon">
+      <ul class="clearfix">
+        <li><a href="javascript:;"><img src="./images/kfc.jpg"><p>肯德基</p></a></li>
+      </ul>
+    </div>
+
+    <!-- 底部 -->
+    <div class="mmm_footer_common">
+      <div class="top clearfix">
+        <a href='javascript:;'>登陆</a>
+        <a href='javascript:;'>注册</a>
+        <a href='javascript:;' id="to_top">返回顶部</a>
+      </div>
+      <div class="bottom">
+        <p class="clearfix">
+          <a href='javascript:;' class="app">手机APP下载</a>
+          <a href='javascript:;'>慢慢买手机版</a>
+          <a href='javascript:;' class="compare">--掌上比价平台</a>
+        </p>
+
+        <p>m.manmanbuy.com</p>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 模板 -->
+  <!-- 商品列表-->
+  <script type="text/html" id="couponTpl">
+    {{ each result v i }}
+      <li><a href="{{ v.couponLink }}?couponid={{ v.couponId }}"><img src="{{ v.couponImg }}"><p>{{ v.couponTitle }}</p></a></li>
+    {{ /each }}
+  </script>
+
+
+
+  <script src="lib/zepto/zepto.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/coupon.js"></script>
+</body>
+
+</html>

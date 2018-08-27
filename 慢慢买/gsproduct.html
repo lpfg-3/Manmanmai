@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>凑单品</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/gsproduct.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- 头部 -->
+    <div class="mmm_header_common">
+      <div class="icon_left fl">
+        <a href='javascript:history.go(-1);'>
+          <i></i>
+        </a>
+      </div>
+
+      <div class="icon_right fr">
+        <a href='javascript:;'>
+          <img src="images/header_app.png">
+        </a>
+      </div>
+      <h3>凑单品</h3>
+    </div>
+
+
+    <!-- 产品列表 -->
+    <div class="mmm_list">
+      <div class="title">
+        <ul class="head_box clearfix">
+          <li class="shop">
+            <a href="javascript:;">
+              <span class="up">京东</span>
+            </a>
+          </li>
+          <li class="area">
+            <a href="javascript:;">
+              <span class="up">华北</span>
+            </a>
+          </li>
+          <li class="price">
+            <a href="javascript:;">
+              <span class="up">全部价格</span>
+            </a>
+          </li>
+        </ul>
+        <div class="select">
+          <ul class="shop_box">
+            <li>1</li>
+            <li>
+              <a href="">1</a>
+            </li>
+          </ul>
+          <ul class="area_box"></ul>
+          <ul class="price_box">
+            <li>
+              <a href='javascript:;'>全部价格</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="content">
+        <ul class="clearfix">
+          <li>
+            <a href="javascript:;">
+              <img src="images/gs.jpg">
+              <p class="mui-ellipsis">廿一客(21cake)专用餐具 1人份(不单独配送)</p>
+              <div class="bottom">
+                <span class="price fl">¥0.50</span>
+                <div class="fr btn">去凑单</div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 底部 -->
+    <div class="mmm_footer_common">
+      <div class="top clearfix">
+        <a href='javascript:;'>登陆</a>
+        <a href='javascript:;'>注册</a>
+        <a href='javascript:;' id="to_top">返回顶部</a>
+      </div>
+      <div class="bottom">
+        <p class="clearfix">
+          <a href='javascript:;' class="app">手机APP下载</a>
+          <a href='javascript:;'>慢慢买手机版</a>
+          <a href='javascript:;' class="compare">--掌上比价平台</a>
+        </p>
+
+        <p>m.manmanbuy.com</p>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 模板 -->
+  <!-- 商店列表 -->
+  <script type="text/html" id="shopTpl">
+    {{ each result v i }}
+      <li>
+        <a href="javascript:;" data-id="{{ v.shopId }}">{{ v.shopName }}</a>
+      </li>
+    {{ /each }}
+  </script>
+
+  <!-- 区域列表 -->
+  <script type="text/html" id="areaTpl">
+    {{ each result v i }}
+      <li>
+        <a href="javascript:;" data-id="{{ v.areaId }}">{{ v.areaName }}</a>
+      </li>
+    {{ /each }}
+  </script>
+
+  <!-- 推荐商品 -->
+  <script type="text/html" id="itemsTpl">
+    {{ each result v i }}
+    <li>
+      <a href="javascript:;">
+        <img src="{{ v.productImg }}">
+        <p class="mui-ellipsis">{{ v.productName }}</p>
+        <div class="bottom">
+          <span class="price fl">{{ v.productPrice }}</span>
+          <div class="fr btn">去凑单</div>
+        </div>
+      </a>
+    </li>
+    {{ /each }}
+  </script>
+
+
+  <script src="lib/zepto/zepto.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/gsproduct.js"></script>
+</body>
+
+</html>

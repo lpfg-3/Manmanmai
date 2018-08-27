@@ -1,0 +1,32 @@
+.mmm_brandhot {
+  padding-bottom: .5rem;
+}
+.mmm_brandhot .title {
+  margin: .2rem .1rem;
+  border: 0.01rem solid #ccc;
+  color: #87471C;
+  height: 0.8rem;
+  line-height: .8rem;
+  font-size: .32rem;
+  padding-left: 0.2rem;
+  background-color: #EEEEEE;
+}
+.mmm_brandhot ul {
+  border-top: 0.01rem solid #ccc;
+  border-bottom: 0.01rem solid #ccc;
+  border-radius: .1rem;
+  overflow: hidden;
+}
+.mmm_brandhot ul li {
+  border-bottom: 0.01rem solid #ccc;
+}
+.mmm_brandhot ul li a {
+  font-size: .32rem;
+  padding-left: .35rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  background-color: #EDEDED;
+}
+.mmm_brandhot ul li:last-child {
+  border: none;
+}

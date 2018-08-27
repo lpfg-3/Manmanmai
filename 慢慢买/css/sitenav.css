@@ -1,0 +1,23 @@
+.mmm_shop_bav {
+  padding: .2rem .85rem;
+}
+.mmm_shop_bav li {
+  float: left;
+  padding: 8px;
+}
+.mmm_shop_bav li a {
+  border: 0.01rem solid #ccc;
+  font-size: .36rem;
+  height: .85rem;
+  line-height: .85rem;
+  position: relative;
+  padding-left: .65rem;
+  padding-right: .2rem;
+}
+.mmm_shop_bav li a img {
+  width: 0.35rem;
+  height: 0.35rem;
+  position: absolute;
+  left: .14rem;
+  top: .26rem;
+}

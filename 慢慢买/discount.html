@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>moneyproduct</title>
   <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/moneyproduct.css">
+  <link rel="stylesheet" href="css/discount.css">
 </head>
 
 <body>
@@ -34,6 +34,7 @@
     <!-- 产品信息 -->
     <div class="moneyproduct">
       <h3>移动端凑单品：海天 鲜味 生抽 1.28L</h3>
+      <div class="price">10.9元</div>
       <div class="subtitle">
         <p>京东商城 10-25 14:10 小编烟火 / 慢慢买</p>
       </div>
@@ -44,9 +45,8 @@
         <img class="lgimg" src="images/jiangyou.jpg">
       </div>
     </div> 
+
     <div class="mmm_extra">
-      <!-- 城市列表 -->
-      <div class="city_list"></div>
 
       <div class="go_shop">
         <a href='javascript:;'>前往购买</a>
@@ -85,14 +85,15 @@
   <script type="text/html" id="infoTpl">
     {{ each result v i }}
     <h3>{{ v.productName }}</h3>
-      <div class="subtitle">
-        <p>{{ v.productFrom }} {{ v.productTime }} {{ v.productTips }}</p>
+     <div class="price">{{ v.productPrice }}</div>
+    <div class="subtitle">
+      <p>{{ v.productFrom }} {{ v.productTime }} {{ v.productTips }}</p>
     </div>
     <div class="info">
-        {{@v.productImgSm}}
-        <p>{{ v.productInfo }}  {{ v.productInfo1 }}</p>
-        <p>{{ v.productInfo2 }}</p>
-        {{@v.productImg2}}
+      {{@v.productImg}}
+      <p>{{ v.productInfo }}  {{ v.productInfo1 }}</p>
+      <p>{{ v.productInfo2 }}</p>
+      {{@v.productImg}}
     </div>
     {{ /each }}
   </script>
@@ -101,7 +102,7 @@
   <script src="lib/zepto/zepto.min.js"></script>
   <script src="lib/artTemplate/template-web.js"></script>
   <script src="js/common.js"></script>
-  <script src="js/moneyproduct.js"></script>
+  <script src="js/discount.js"></script>
 </body>
 
 </html>

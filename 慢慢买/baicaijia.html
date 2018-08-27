@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>baicaijia</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/baicaijia.css">
+  
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- 头部 -->
+    <div class="mmm_bcj_head mmm_header_common">
+      <div class="icon_left fl">
+        <a href='javascript:history.go(-1);'>
+          <i></i>
+        </a>
+      </div>
+
+      <div class="icon_right fr">
+        <a href='javascript:;'>
+          <img src="images/header_app.png">
+        </a>
+      </div>
+      <h3>省钱控-最新优惠</h3>
+    </div>
+
+    <!-- 导航 -->
+    <div class="mmm_nav" id="nav">
+      <ul class="clearfix">
+        <li><a href="javascript:;" class="current">全部</a></li>
+      </ul>
+    </div>
+
+    <!-- 推荐产品 -->
+    <div class="mmm-product">
+      <ul class="items">
+        <!-- 产品模板渲染区 -->
+        <li>
+          <a href='javascript:;'>
+            <div class="img">
+              <img src="images/bcj.jpg">
+            </div>
+          </a>
+            
+
+          <div class="desc">
+            
+            <div class="title">
+              <span class="b">[包邮]</span>双十一红包 今日开启
+            </div>
+
+            <div class="price">
+              <em>¥</em>0.0
+              <del>¥0</del>
+            </div>
+
+            <div class="num">
+              <div class="bar clearfix">
+                <a href="http://shop.m.taobao.com/shop/coupon.htm?activityId=27a14c9fc6bb4a48b917d567fcf8f664&amp;sellerId=2246833798" class="goquan"
+                  target="_blank"></a>
+                <i>
+                  <em style="width:1%;"></em>
+                  <span>1%</span>
+                </i>
+                <b>已领82张</b>
+              </div>
+            </div>
+
+            <div class="link clearfix">
+
+              <div class="coupon fl">
+                <a href="http://shop.m.taobao.com/shop/coupon.htm?activityId=27a14c9fc6bb4a48b917d567fcf8f664&amp;sellerId=2246833798" target="_blank">点此领15元优惠券</a>
+              </div>
+
+              <div class="shop fr">
+                <a biz-itemid="56297410_8818824_54778388" isconvert="1" href="http://s.click.taobao.com/3HlIdQx" target="_blank">下单链接</a>
+              </div>
+              
+            </div>
+          </div>
+         
+        </li>
+      </ul>
+    </div>
+
+
+    <!-- 底部 -->
+    <div class="mmm_footer_common">
+      <div class="top clearfix">
+        <a href='javascript:;'>登陆</a>
+        <a href='javascript:;'>注册</a>
+        <a href='javascript:;' id="to_top">返回顶部</a>
+      </div>
+      <div class="bottom">
+        <p class="clearfix">
+          <a href='javascript:;' class="app">手机APP下载</a>
+          <a href='javascript:;'>慢慢买手机版</a>
+          <a href='javascript:;' class="compare">--掌上比价平台</a>
+        </p>
+
+        <p>m.manmanbuy.com</p>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 模板 -->
+  <!-- 导航 -->
+  <script type="text/html" id="navTpl">
+    {{ each result v i }}
+      <li><a href="javascript:;" class="{{ i === 0 ? 'current' : ''}}" data-id={{ v.titleId }}>{{ v.title }}</a></li>
+    {{ /each }}
+  </script>
+  <!-- 推荐商品 -->
+  <script type="text/html" id="productTpl">
+    {{ each result v i }}
+      <li>
+        <a href='javascript:;'>
+          <div class="img">{{@v.productImg}}</div>
+        </a>
+          
+        <div class="desc">
+          
+          <div class="title">{{@v.productName}}</div>
+
+          <div class="price">{{@v.productPrice}}</div>
+
+          <div class="num">{{@v.productCouponRemain}}</div>
+
+          <div class="link clearfix">
+
+            <div class="coupon fl">{{@v.productCoupon}}</div>
+
+            <div class="shop fr">{{@v.productHref}}</div>
+            
+          </div>
+
+        </div>
+       
+      </li>
+    {{ /each }}
+  </script>
+
+  <script src="lib/zepto/zepto.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="lib/iscroll/iscroll.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/baicaijia.js"></script>
+
+</body>
+
+</html>
