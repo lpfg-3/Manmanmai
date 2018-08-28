@@ -18,18 +18,18 @@
         span{
           position: relative;          
         }
-        .up::after,
-        .down::after{
+        span::after,
+        span.down::after{
           position: absolute;
           line-height: .32rem;
           transform: scale(.5);
         }
-        .up::after{
+        span::after{
           content: "▲";
           right: -0.3rem;
           top: -0.02rem;
         }
-        .down::after{
+        span.down::after{
           content: "▼";
           right: -0.3rem;
           bottom: -0.02rem;
@@ -76,7 +76,8 @@
         padding: .1rem;
         img{
           margin: 0 auto;
-          width: 100%;
+          width: 3.2rem;;
+          height: 3.2rem;
         }
         .bottom{
           padding: .1rem;

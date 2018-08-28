@@ -45,7 +45,7 @@ $(function () {
         pageTotal = Math.ceil( info.totalCount / info.pagesize );
         /* 渲染下拉框 */
         var htmlStr2 = template('selectTpl', {pageTotal: pageTotal,val:pageid});
-        $('.mmm_pagination_common .select').html( htmlStr2 );
+        $('.mmm_pagination_common .select_page').html( htmlStr2 );
       }
     })
 
@@ -70,8 +70,22 @@ $(function () {
   })
 
   // 选择select
-  $('.mmm_pagination_common .select').on('change', function () {
-    pageid = $(this).val();
+  // $('.mmm_pagination_common select').on('change', function () {
+  //   pageid = $(this).val();
+  //   renderList();
+  // })
+  // 使用 a标签 进行下拉选择
+  $('.mmm_pagination_common .select_page').on('click', '.now_page', function () {
+    $('.mmm_pagination_common .select_page .select').toggle();
+  })
+  $('.mmm_pagination_common .select_page').on('click', '.select a', function () {
+    $('.mmm_pagination_common .select').hide();
+    
+    // 获取页码
+    if (pageid === $(this).data( 'index' )) {
+      return;
+    }
+    pageid = $(this).data( 'index' );
     renderList();
   })
 })

@@ -329,7 +329,7 @@ button{
 
 /* 分页复用 */
 .mmm_pagination_common{
-  div{
+  >div{
     width: 33.33%;
     text-align: center;
     padding: .4rem 0;
@@ -356,6 +356,37 @@ button{
     -webkit-appearance:none;
     option{
       height: 0.6rem;
+    }
+  }
+  .select_page{
+    position: relative;
+    a{
+      
+      width: 1.45rem;
+      height: 0.7rem;
+      line-height: 0.7rem;
+      font-size: .26rem;
+    }
+    a:last-child{
+      border: none;
+    }
+    .now_page{
+      border: 0.02rem solid #ccc;
+      margin: 0 auto;
+    }
+    .select{
+      display: none;
+      background-color: #fff;
+      width: 1.45rem;
+      position: absolute;
+      bottom: .7rem;
+      left: 50%;
+      transform: translate(-50%);
+      border: 0.02rem solid #ccc;
+      border-bottom: none;
+      a{
+        cursor:pointer
+      }
     }
   }
 }

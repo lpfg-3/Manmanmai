@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>productlist</title>
+  <title>商品列表</title>
   <link rel="stylesheet" href="css/common.css">
 </head>
 
@@ -80,11 +80,19 @@
         <button class="prev">上一页</button>
       </div>
       <div class="fl">
-        <select class="select">
+        <div class="select_page">
+          <a href='javascript:;' class="now_page">1/3</a>
+          <div class="select">
+            <a href='javascript:;'>1/3</a>
+            <a href='javascript:;'>2/3</a>
+            <a href='javascript:;'>3/3</a>
+          </div>
+        </div>
+        <!-- <select>
           <option selected value="1">1/3</option>
           <option value="2">2/3</option>
           <option value="3">3/3</option>
-        </select>
+        </select> -->
       </div>
       <div class="fl">
         <button class="next">下一页</button>
@@ -149,10 +157,19 @@
   </script>
   <!-- 下拉框 -->
   <!-- select下拉框 -->
-  <script type="text/html" id="selectTpl">
+  <!-- <script type="text/html" id="selectTpl">
     <% for (var i = 1; i <= pageTotal  ; i++) { %>
       <option {{ i === val ? 'selected' : ''}} value="{{ i }}">{{ i }}/{{ pageTotal }}</option>
     <%}%>  
+  </script>  -->
+  <!-- a标签下拉框 -->
+  <script type="text/html" id="selectTpl">
+    <a href='javascript:;' class="now_page">{{ val }}/{{ pageTotal }}</a>
+    <div class="select">
+    <% for (var i = 1; i <= pageTotal  ; i++) { %>
+      <a data-index="{{ i }}">{{ i }}/{{ pageTotal }}</a>
+    <%}%>  
+    </div>
   </script> 
 
   <script src="lib/zepto/zepto.min.js"></script>

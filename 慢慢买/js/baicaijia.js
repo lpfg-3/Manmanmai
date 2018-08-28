@@ -16,34 +16,15 @@ $(function () {
       // 获取第一个的titleid
       titleid = info.result[0].titleId;
 
-      //  // 菜单滑动
-      // new IScroll('#nav', {
-      //   scrollX:true,
-      //   scrollY:false
-      // });
+        // 菜单滑动
+      new IScroll('#nav', {
+        scrollX:true,
+        scrollY:false
+      });
 
-
-      $('#nav').on('mousedown', function (e) {
-          console.log(1);
-
-         
-          
-          $(window).on('mousemove', function (e) {
-            console.log(2);
-
-          
-
-          })
-          $('#nav').on('mouseup', function () {
-            console.log(4);
-            $(window).off('mousemove');
-          })
-
-        })
-        
-        // 渲染第一个菜单的内容
-        render();
-      }
+      // 渲染第一个菜单的内容
+      render();
+    }
   })
 
   // 给菜单注册事件委托， 点击那个菜单，加载对应内容

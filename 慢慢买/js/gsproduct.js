@@ -77,12 +77,14 @@ $(function () {
   $('.mmm_list .head_box').on('click', 'li', function () {
     // 获取点击的元素的索引
     var index = $(this).index();
+    $(this).find('span').toggleClass('down');
     // console.log(index);  
-    $sel_ul.eq(index).show().siblings().hide(); 
+    $sel_ul.eq(index).toggle().siblings().hide(); 
   })
 
   // 下拉框里的元素注册点击事件
   $shop_box.on('click', 'a', function () {
+    $shopSpan.removeClass('down');
     // 隐藏下拉框
     $shop_box.hide();
     // 获取点击的商城id
@@ -95,6 +97,7 @@ $(function () {
     renderItems(shopid, areaid);
   })
   $area_box.on('click', 'a', function () {
+    $areaSpan.removeClass('down');
     // 下拉框隐藏
     $area_box.hide();
     // 获取点击区域id
@@ -107,6 +110,7 @@ $(function () {
     renderItems(shopid, areaid);
   })
   $price_box.on('click', 'a', function () {
+    $priceSpan.removeClass('down');
     // 隐藏下拉框
     $price_box.hide();
 

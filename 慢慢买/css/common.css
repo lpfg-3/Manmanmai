@@ -291,7 +291,7 @@ button {
   border-bottom: 0.02rem solid #bababa;
 }
 /* 分页复用 */
-.mmm_pagination_common div {
+.mmm_pagination_common > div {
   width: 33.33%;
   text-align: center;
   padding: .4rem 0;
@@ -318,6 +318,36 @@ button {
 }
 .mmm_pagination_common select option {
   height: 0.6rem;
+}
+.mmm_pagination_common .select_page {
+  position: relative;
+}
+.mmm_pagination_common .select_page a {
+  width: 1.45rem;
+  height: 0.7rem;
+  line-height: 0.7rem;
+  font-size: .26rem;
+}
+.mmm_pagination_common .select_page a:last-child {
+  border: none;
+}
+.mmm_pagination_common .select_page .now_page {
+  border: 0.02rem solid #ccc;
+  margin: 0 auto;
+}
+.mmm_pagination_common .select_page .select {
+  display: none;
+  background-color: #fff;
+  width: 1.45rem;
+  position: absolute;
+  bottom: .7rem;
+  left: 50%;
+  transform: translate(-50%);
+  border: 0.02rem solid #ccc;
+  border-bottom: none;
+}
+.mmm_pagination_common .select_page .select a {
+  cursor: pointer;
 }
 /* 底部共用 */
 .mmm_footer_common {

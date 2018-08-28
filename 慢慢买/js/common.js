@@ -34,6 +34,35 @@
     }
   }
 
+  // 封装tap事件
+  lpf.tap = function (selector, callBack) {
+    // 通过选择器获取 元素
+    var box = document.querySelector(selector || body);
+
+    var flag = false;
+    // 注册 touchstart 事件
+    box.addEventListener('touchstart', function () {
+      var start = Date.new();
+    })
+    // 注册 touchmove 事件
+    box.addEventListener('touchstart', function () {
+      flag = true;
+    })
+    // 注册 touchstart 事件
+    box.addEventListener('touchstart', function () {
+      var end = Date.new();
+    })
+
+    if (flag) {
+      return;
+    }
+
+    if (end - start <= 150) {
+      callBack&&callBack();
+    }
+
+  }
+
 
   window.lpf = lpf; 
 })()

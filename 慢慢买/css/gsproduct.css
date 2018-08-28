@@ -20,18 +20,18 @@
 .mmm_list .title .head_box li span {
   position: relative;
 }
-.mmm_list .title .head_box li .up::after,
-.mmm_list .title .head_box li .down::after {
+.mmm_list .title .head_box li span::after,
+.mmm_list .title .head_box li span.down::after {
   position: absolute;
   line-height: .32rem;
   transform: scale(0.5);
 }
-.mmm_list .title .head_box li .up::after {
+.mmm_list .title .head_box li span::after {
   content: "▲";
   right: -0.3rem;
   top: -0.02rem;
 }
-.mmm_list .title .head_box li .down::after {
+.mmm_list .title .head_box li span.down::after {
   content: "▼";
   right: -0.3rem;
   bottom: -0.02rem;
@@ -76,7 +76,8 @@
 }
 .mmm_list .content li a img {
   margin: 0 auto;
-  width: 100%;
+  width: 3.2rem;
+  height: 3.2rem;
 }
 .mmm_list .content li a .bottom {
   padding: .1rem;

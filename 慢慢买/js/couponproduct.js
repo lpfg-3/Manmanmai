@@ -50,18 +50,14 @@ $(function () {
     index = $(this).data( 'index' );
 
     // 判断index
-    if ( index == $('.modal li').length - 1 ) {
-      $next.hide();
-      // index = $('.modal li').length - 1;
-    }
-    if ( index == 0 ) {
-      $prev.hide();
-      // index = 0;
-    }
+    index == $('.modal li').length - 1 ? $next.hide() : $next.show();
 
+    index == 0 ? $prev.hide() : $prev.show();
 
     $(".modal").show();
+
     $ul.removeClass('transiton').css('transform', 'translate(' + (-index * width + unit) + ')')
+    
   })
 
   // 模态框
